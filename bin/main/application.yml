@@ -1,0 +1,22 @@
+---
+micronaut:
+  application:
+    name: micro
+  server:
+        port: 8081
+        cors:
+            enabled: true
+
+---
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/userinput
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 'warouw1945'
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
