@@ -56,13 +56,15 @@ public class UserInputRepository implements UserInputInterface {
 
     @Transactional
     @Override
-    public boolean update(@NotNull Long id, String user_name, String user_password) {
+    public boolean update(@NotNull Long id, String user_name, String user_password, String user_logo) {
         try {
             UserInput userInput = manager.find(UserInput.class, id);
             if (user_name != null)
                 userInput.setUser_name(user_name);
             if (user_password != null)
                 userInput.setUser_password(user_password);
+            if (user_logo != null)
+                userInput.setUser_logo(user_logo);
 
             userInput.setUpdated_at(new Date());
             return true;

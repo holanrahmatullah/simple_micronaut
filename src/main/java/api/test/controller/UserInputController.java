@@ -36,7 +36,7 @@ public class UserInputController {
         try {
             data.put("paga", Math.ceil(repository.size() / limit));
             data.put("status", "ok");
-            data.put("message", "Data Pasien");
+            data.put("message", "Data User");
             data.put("data", userInput);
             return gson.toJson(data);
         } catch (Exception e) {
@@ -62,7 +62,7 @@ public class UserInputController {
     @Produces(MediaType.APPLICATION_JSON)
     public String update(@PathVariable @Nullable final Long id, @Body final UserInput userInput) {
         final HashMap<String, Object> data = new HashMap<>();
-        if (repository.update(id, userInput.getUser_name(), userInput.getUser_password())) {
+        if (repository.update(id, userInput.getUser_name(), userInput.getUser_password(), userInput.getUser_logo())) {
             data.put("status", "ok");
         } else {
             data.put("status", "fail");

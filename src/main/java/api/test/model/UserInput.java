@@ -31,6 +31,10 @@ public class UserInput {
     @Column(name = "user_password")
     private String user_password;
 
+    @NotNull(message = "Gambar Harus di isi")
+    @Column(name = "user_logo")
+    private String user_logo;
+
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
@@ -66,6 +70,14 @@ public class UserInput {
 
     public void setUser_password(String user_password) {
         this.user_password = user_password;
+    }
+
+    public String getUser_logo() {
+        return user_logo;
+    }
+
+    public void setUser_logo(String user_logo) {
+        this.user_logo = user_logo;
     }
 
     public Date getCreated_at() {

@@ -3,14 +3,14 @@ micronaut:
   application:
     name: micro
   server:
-        port: 8081
+        port: 8082
         cors:
             enabled: true
 
 ---
 datasources:
   default:
-    url: jdbc:postgresql://localhost:5432/userinput
+    url: jdbc:postgresql://localhost:5432/healtcare
     driverClassName: org.postgresql.Driver
     username: postgres
     password: 'warouw1945'

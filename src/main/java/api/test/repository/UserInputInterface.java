@@ -16,7 +16,7 @@ public interface UserInputInterface {
 
     UserInput findById(@NotNull Long id);
 
-    boolean update(@NotNull Long id, String user_name, String user_password);
+    boolean update(@NotNull Long id, String user_name, String user_password, String user_logo);
 
     boolean destroy(@NotNull Long id);
 }
